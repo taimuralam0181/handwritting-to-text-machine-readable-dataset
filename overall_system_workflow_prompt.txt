@@ -1,0 +1,72 @@
+Write the Overall System Workflow for a Smart Prescription Analysis System.
+
+The system workflow must follow this exact application logic:
+
+1. The user opens the Streamlit-based Smart Prescription Analysis System.
+2. The user selects a workflow mode:
+   - Single Image
+   - Bulk Images
+3. The user chooses a processing mode:
+   - High Accuracy
+   - Fast
+4. For Single Image mode:
+   - The user uploads one prescription image in JPG, JPEG, or PNG format.
+   - The user selects an extraction mode:
+     - Use full image
+     - Use auto crop
+     - Use both and keep better result
+5. For Bulk Images mode:
+   - The user uploads multiple prescription images.
+   - The user selects the extraction mode for all files.
+6. The system preprocesses the input image:
+   - It reads the uploaded image.
+   - If auto crop is selected, it crops the lower medicine-dense region.
+   - If both mode is selected, it runs extraction on both full image and cropped image and keeps the better result.
+7. The system sends the prescription image to a Gemini/Gemma model for text extraction.
+8. The model returns extracted prescription text.
+9. The system parses the extracted text to identify prescribed medicines.
+10. Each medicine name is cleaned to remove wrappers such as:
+   - Input text:
+   - Input:
+   - quotes
+   - numbering
+   - extra formatting artifacts
+11. The system attempts medicine-name correction using:
+   - alias mapping
+   - fuzzy matching with the local medicine dataset
+   - optional Gemini-based correction in High Accuracy mode
+12. The system classifies each medicine into a department:
+   - Cardiology
+   - Ophthalmology
+   - Unknown
+13. Department classification is performed using:
+   - local seed dataset matching
+   - local trained classifier if available
+   - Gemini fallback in High Accuracy mode when needed
+14. The system builds clean final rows containing only:
+   - medicine_name
+   - department
+15. The system displays extracted results to the user.
+16. The system also provides:
+   - review corrections table
+   - unknown-only review
+   - department summary
+   - duplicate image warning
+   - recent processing history
+17. The user can manually edit corrected medicine names and department labels.
+18. The user can save review corrections, which update:
+   - alias dataset
+   - medicine department dataset
+19. The user can export results as:
+   - Excel or CSV
+   - PDF
+   - Bulk ZIP export for multiple images
+20. The user can append results into a selected CSV collection file.
+21. If auto append is enabled, future processed images are automatically added to the same CSV collection.
+22. The system stores processed output, summaries, and dataset-ready rows for later use.
+
+Requirements for the write-up:
+- Write in clear academic English.
+- Use paragraph format or numbered workflow steps.
+- Do not invent features outside this workflow.
+- Keep the description aligned with a prescription image -> medicine extraction -> department classification -> export pipeline.

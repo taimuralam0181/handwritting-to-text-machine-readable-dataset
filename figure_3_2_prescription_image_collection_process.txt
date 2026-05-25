@@ -1,0 +1,9 @@
+Figure 3.2: Prescription Image Collection Process
+
+Figure 3.2 illustrates the prescription image collection process used in the Smart Prescription Analysis System. The process begins with the acquisition of prescription images from users or available sample sources. These images may include printed or handwritten prescriptions and are collected in supported image formats such as JPG, JPEG, and PNG. During collection, attention is given to image clarity, visibility of medicine names, and overall readability so that the downstream extraction model can process the prescription effectively.
+
+After collection, each prescription image is checked for basic quality requirements. Images that are excessively blurred, cropped incorrectly, rotated beyond readability, or missing the medicine section are considered weak inputs and may reduce extraction accuracy. Therefore, the collection process favors images where the prescription content, especially the medicine region, is visible and sufficiently clear for analysis.
+
+Once the image is accepted, it is stored as an input sample for the system. In single-image mode, one prescription is uploaded and processed at a time. In bulk mode, multiple prescription images are collected together for batch processing. The collection process may also include duplicate checking so that the same image is not repeatedly analyzed without user awareness.
+
+The collected prescription images then move to the preprocessing stage, where the system reads the image, optionally applies auto-cropping to focus on the medicine-dense region, and prepares the data for AI-based text extraction. Thus, the prescription image collection process forms the first operational stage of the complete workflow, ensuring that valid and usable prescription inputs enter the analysis pipeline.
