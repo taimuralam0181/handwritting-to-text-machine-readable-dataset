@@ -24,6 +24,13 @@ import zipfile
 
 import joblib
 from xml.sax.saxutils import escape
+from ui.dashboard_theme import THEME_OPTIONS, apply_dashboard_styles, render_dashboard_section, render_stat_cards
+
+warnings.filterwarnings(
+    "ignore",
+    message=".*google.generativeai.*",
+    category=FutureWarning,
+)
 
 try:
     from sklearn.exceptions import InconsistentVersionWarning
@@ -102,239 +109,33 @@ if 'single_pure_medicine_name_only' not in st.session_state:
 if 'bulk_pure_medicine_name_only' not in st.session_state:
     st.session_state.bulk_pure_medicine_name_only = True
 if 'single_visible_columns' not in st.session_state:
-    st.session_state.single_visible_columns = [
-        'classification_status',
-        'confidence',
-        'name_source',
-        'department_source',
-        'resolution_explanation',
-    ]
+    st.session_state.single_visible_columns = []
 if 'bulk_visible_columns' not in st.session_state:
-    st.session_state.bulk_visible_columns = [
-        'classification_status',
-    ]
-if 'evaluation_report' not in st.session_state:
-    st.session_state.evaluation_report = None
-if 'evaluation_source_shape' not in st.session_state:
-    st.session_state.evaluation_source_shape = None
+    st.session_state.bulk_visible_columns = []
+if 'dashboard_theme' not in st.session_state:
+    st.session_state.dashboard_theme = "Colorful Day"
+st.session_state.single_visible_columns = [
+    column for column in st.session_state.single_visible_columns
+    if column not in {'resolution_explanation', 'confidence', 'classification_status', 'name_source', 'department_source'}
+]
+st.session_state.bulk_visible_columns = [
+    column for column in st.session_state.bulk_visible_columns
+    if column not in {'resolution_explanation', 'confidence', 'classification_status', 'name_source', 'department_source'}
+]
 
 # Page configuration
 st.set_page_config(
-    page_title="Smart Prescription Analysis System",
+    page_title="Prescription Data Extraction Dashboard",
     page_icon="📋",
     layout="wide"
 )
 
-# Custom CSS
-st.markdown("""
-    <style>
-    .stApp {
-        background:
-            radial-gradient(circle at top right, rgba(21, 147, 127, 0.10), transparent 22%),
-            radial-gradient(circle at top left, rgba(30, 64, 175, 0.08), transparent 20%),
-            linear-gradient(180deg, #f6fbff 0%, #fbfdfd 100%);
-        font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
-    }
-    .main-header {
-        padding: 1.75rem 1.9rem;
-        background: linear-gradient(135deg, #123a6f 0%, #0f766e 100%);
-        border: 1px solid rgba(255,255,255,0.18);
-        border-radius: 24px;
-        color: white;
-        margin-bottom: 1.2rem;
-        box-shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
-    }
-    .main-header h1 {
-        margin: 0 0 0.35rem 0;
-        font-size: 2.15rem;
-        letter-spacing: -0.03em;
-        font-weight: 800;
-    }
-    .main-header p {
-        margin: 0;
-        opacity: 0.92;
-        font-size: 1rem;
-    }
-    .dashboard-note {
-        color: #335c67;
-        font-size: 0.95rem;
-        margin: 0.3rem 0 1rem 0.1rem;
-    }
-    .section-chip {
-        display: inline-block;
-        padding: 0.42rem 0.8rem;
-        border-radius: 999px;
-        background: #e6f4f1;
-        color: #0f766e;
-        font-size: 0.82rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        margin-bottom: 0.6rem;
-    }
-    .section-heading {
-        margin: 0 0 0.3rem 0;
-        color: #123a6f;
-        font-size: 1.25rem;
-        font-weight: 700;
-    }
-    .section-copy {
-        margin: 0 0 1rem 0;
-        color: #58727d;
-        font-size: 0.95rem;
-    }
-    .stat-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.85rem;
-        margin: 1rem 0 1.35rem 0;
-    }
-    .stat-card {
-        background: rgba(255,255,255,0.88);
-        border: 1px solid rgba(18, 58, 111, 0.08);
-        border-radius: 20px;
-        padding: 1rem 1.1rem;
-        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
-    }
-    .stat-label {
-        color: #58727d;
-        font-size: 0.82rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        margin-bottom: 0.4rem;
-    }
-    .stat-value {
-        color: #123a6f;
-        font-size: 1.7rem;
-        font-weight: 800;
-        line-height: 1.05;
-    }
-    .image-preview-card {
-        border-radius: 20px;
-        background: rgba(255,255,255,0.9);
-        border: 1px solid rgba(18, 58, 111, 0.08);
-        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
-        padding: 0.9rem;
-        margin-bottom: 0.85rem;
-    }
-    .image-preview-title {
-        font-size: 0.76rem;
-        font-weight: 800;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #0f766e;
-        margin-bottom: 0.45rem;
-    }
-    .image-preview-sub {
-        color: #6b7f86;
-        font-size: 0.9rem;
-        margin-bottom: 0.65rem;
-    }
-    .stat-sub {
-        color: #6b7f86;
-        font-size: 0.86rem;
-        margin-top: 0.3rem;
-    }
-    .panel-shell {
-        background: rgba(255,255,255,0.78);
-        border: 1px solid rgba(18, 58, 111, 0.08);
-        border-radius: 24px;
-        padding: 1.15rem 1.15rem 1.25rem 1.15rem;
-        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-    }
-    .sidebar-card {
-        padding: 0.85rem 0.95rem;
-        border-radius: 18px;
-        background: rgba(255,255,255,0.82);
-        border: 1px solid rgba(18, 58, 111, 0.08);
-        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
-        margin-bottom: 0.8rem;
-    }
-    .sidebar-kicker {
-        font-size: 0.76rem;
-        font-weight: 800;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #0f766e;
-        margin-bottom: 0.35rem;
-    }
-    .sidebar-value {
-        font-size: 1.05rem;
-        font-weight: 800;
-        color: #123a6f;
-        line-height: 1.2;
-    }
-    .sidebar-sub {
-        color: #6b7f86;
-        font-size: 0.86rem;
-        margin-top: 0.2rem;
-    }
-    .sidebar-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.6rem;
-        margin: 0.4rem 0 0.8rem 0;
-    }
-    .sidebar-tile {
-        padding: 0.7rem 0.75rem;
-        border-radius: 14px;
-        background: #f8fcfb;
-        border: 1px solid rgba(15, 118, 110, 0.12);
-    }
-    .sidebar-tile-label {
-        font-size: 0.73rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: #58727d;
-        font-weight: 700;
-    }
-    .sidebar-tile-value {
-        margin-top: 0.18rem;
-        font-size: 1rem;
-        font-weight: 800;
-        color: #123a6f;
-    }
-    .success-message {
-        background-color: #d4edda;
-        border-left: 5px solid #28a745;
-        padding: 1rem;
-        border-radius: 5px;
-        margin: 1rem 0;
-    }
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #f7fbff 0%, #eff7f7 100%);
-        border-right: 1px solid rgba(18, 58, 111, 0.08);
-    }
-    .stButton > button, .stDownloadButton > button {
-        border-radius: 14px;
-        font-weight: 700;
-    }
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 0.4rem;
-    }
-    .stTabs [data-baseweb="tab"] {
-        background: rgba(230, 244, 241, 0.85);
-        border-radius: 12px 12px 0 0;
-        padding: 0.65rem 1rem;
-        font-weight: 700;
-    }
-    .stDataFrame {
-        border-radius: 16px;
-        overflow: hidden;
-    }
-    @media (max-width: 900px) {
-        .stat-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-    </style>
-""", unsafe_allow_html=True)
+apply_dashboard_styles(st.session_state.get("dashboard_theme", "Colorful Day"))
 
 # Header
-st.markdown('<div class="main-header"><h1>📋 Smart Prescription Analysis System</h1><p>AI-Powered Medical Text Extraction</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>Prescription Data Extraction Dashboard</h1></div>', unsafe_allow_html=True)
 st.markdown(
-    '<div class="dashboard-note">Upload prescription images, review corrected medicine names, and export clean department-wise outputs from one focused dashboard.</div>',
+    '<div class="dashboard-note">Upload handwritten prescriptions, review corrected medicine names, classify departments, and export clean datasets.</div>',
     unsafe_allow_html=True,
 )
 
@@ -361,15 +162,15 @@ Symptoms: [Patient symptoms]
 Tests Ordered: [Lab tests]
 
 PRESCRIBED MEDICATIONS:
-• [Medication name] - [dosage pattern like 1-0-1] for [X] days
-• [Next medication] - [dosage pattern] for [X] days
+- [Medication name] - [dosage pattern like 1-0-1] for [X] days
+- [Next medication] - [dosage pattern] for [X] days
 
 FOLLOW-UP DATE: [Date or Not specified]
 
 Use "Not specified" for any missing information.
 Do not add comments, brackets, explanations, conversions, checks, confirmations, repeated sections, or any text outside the exact template.
 Under PRESCRIBED MEDICATIONS, each line must contain only:
-• [Medication name] - [dosage pattern] for [X] days
+- [Medication name] - [dosage pattern] for [X] days
 List ALL medications found. No extra text or explanations."""
 
 MEDICATION_ONLY_PROMPT = """Read this prescription image and extract only the prescribed medicines.
@@ -385,8 +186,6 @@ If dosage pattern is missing, use:
 [Medication name] - Not specified for Not specified days
 
 List all medicines found, one per line."""
-
-FAST_MODEL_CANDIDATES = [PREFERRED_GEMINI_MODEL]
 
 HIGH_ACCURACY_MODEL_CANDIDATES = [PREFERRED_GEMINI_MODEL]
 
@@ -414,12 +213,8 @@ OPHTHALMOLOGY_KEYWORDS = (
 )
 
 
-def is_high_accuracy_mode():
-    return st.session_state.get("accuracy_mode", "High Accuracy") == "High Accuracy"
-
-
 def get_active_model_candidates():
-    return HIGH_ACCURACY_MODEL_CANDIDATES if is_high_accuracy_mode() else FAST_MODEL_CANDIDATES
+    return HIGH_ACCURACY_MODEL_CANDIDATES
 
 def parse_prescription_to_columns(extracted_text):
     """
@@ -516,8 +311,8 @@ def parse_prescription_to_columns(extracted_text):
 
 def clean_medication_name(raw_name):
     name = (raw_name or '').strip()
-    name = re.sub(r'^[*•\-]\s*Input\s+text:\s*', '', name, flags=re.IGNORECASE)
-    name = re.sub(r'^[*•\-]\s*Input:\s*', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'^[*-\-]\s*Input\s+text:\s*', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'^[*-\-]\s*Input:\s*', '', name, flags=re.IGNORECASE)
     name = re.sub(r'^Input\s+text:\s*', '', name, flags=re.IGNORECASE)
     name = re.sub(r'^Input:\s*', '', name, flags=re.IGNORECASE)
     name = name.strip().strip('"').strip("'")
@@ -703,7 +498,7 @@ def extract_medications_list(extracted_text):
                 continue
             
             # Remove bullet points
-            line = re.sub(r'^[•\-*]\s*', '', line)
+            line = re.sub(r'^[-\-*]\s*', '', line)
             
             # Pattern 1: With dosage pattern like "1-0-1"
             # Matches: "Cap. Denver 200 - 1-0-1 for Not specified days"
@@ -731,7 +526,7 @@ def extract_medications_list(extracted_text):
     
     # If no medications found with bullet points, try alternative extraction
     if not medications:
-        alt_pattern = r'[•\-]\s*(.+?)\s*-\s*(\d+(?:[.-]\d+)?[-]\d+(?:[.-]\d+)?[-]\d+(?:[.-]\d+)?)'
+        alt_pattern = r'[-\-]\s*(.+?)\s*-\s*(\d+(?:[.-]\d+)?[-]\d+(?:[.-]\d+)?[-]\d+(?:[.-]\d+)?)'
         matches = re.findall(alt_pattern, med_section if med_section_match else extracted_text)
         
         for match in matches:
@@ -743,7 +538,7 @@ def extract_medications_list(extracted_text):
             if not line:
                 continue
 
-            line = re.sub(r'^[•\-*]\s*', '', line)
+            line = re.sub(r'^[-\-*]\s*', '', line)
             line = re.sub(r'^\d+\.\s*', '', line)
             if not line:
                 continue
@@ -997,7 +792,7 @@ def predict_with_classifier(model, medication_name, keyword_department, keyword_
                     'department_source': 'keyword_override',
                     'confidence': keyword_confidence,
                 }
-            if confidence < 0.70 and is_high_accuracy_mode():
+            if confidence < 0.70:
                 gemini_department = infer_department_with_gemini(medication_name)
                 if gemini_department != 'Unknown':
                     return {
@@ -1007,7 +802,7 @@ def predict_with_classifier(model, medication_name, keyword_department, keyword_
                     }
 
         if predicted_department == "Ophthalmology" and not is_eye_like_medication_name(medication_name):
-            if confidence < 0.90 and is_high_accuracy_mode():
+            if confidence < 0.90:
                 gemini_department = infer_department_with_gemini(medication_name)
                 return {
                     'department': gemini_department,
@@ -1023,8 +818,6 @@ def predict_with_classifier(model, medication_name, keyword_department, keyword_
                     'department_source': 'keyword_rules',
                     'confidence': keyword_confidence,
                 }
-            if not is_high_accuracy_mode():
-                return {'department': 'Unknown', 'department_source': 'low_confidence', 'confidence': confidence}
             gemini_department = infer_department_with_gemini(medication_name)
             return {
                 'department': gemini_department,
@@ -1090,7 +883,7 @@ def infer_department_from_seed(medication_name):
 @st.cache_data(show_spinner=False)
 def correct_medicine_name_with_gemini(medication_name):
     """Try to clean OCR-distorted medicine names using Gemini."""
-    if not is_high_accuracy_mode() or not GEMINI_API_KEY or genai is None:
+    if not GEMINI_API_KEY or genai is None:
         return medication_name
 
     prompt = f"""Read this prescription medicine name and correct only obvious OCR spelling mistakes.
@@ -1209,7 +1002,7 @@ def get_name_resolution_source(original_name, resolved_name):
 
 def refine_unknown_medications_with_image(medications, target_bytes, target_mime_type):
     """Ask Gemini to re-check only unknown medicines against the original image."""
-    if not is_high_accuracy_mode() or not medications or not GEMINI_API_KEY or genai is None:
+    if not medications or not GEMINI_API_KEY or genai is None:
         return medications
 
     refined_medications = []
@@ -1433,9 +1226,6 @@ def classify_department_details(medication_name):
     if knn_result is not None:
         return knn_result
 
-    if not is_high_accuracy_mode():
-        return {'department': 'Unknown', 'department_source': 'no_local_match', 'confidence': 0.20}
-
     gemini_department = infer_department_with_gemini(medication_name)
     return {
         'department': gemini_department,
@@ -1462,34 +1252,6 @@ def classify_medications_by_department(medications):
         classified_medications.append(item)
 
     return classified_medications
-
-
-def build_resolution_explanation(medication):
-    department = str(medication.get('department', 'Unknown') or 'Unknown').strip()
-    name_source = str(medication.get('name_resolution_source', 'original') or 'original').strip()
-    department_source = str(medication.get('department_source', 'unknown') or 'unknown').strip()
-    confidence = float(medication.get('confidence', 0.0) or 0.0)
-    confidence_text = f"{int(round(confidence * 100))}%"
-
-    source_labels = {
-        'dataset': 'dataset match',
-        'keyword_rules': 'keyword rules',
-        'keyword_override': 'keyword override',
-        'local_model': 'local model',
-        'svm_model': 'svm model',
-        'knn_model': 'knn model',
-        'gemini_fallback': 'AI fallback',
-        'unknown': 'uncertain match',
-        'low_confidence': 'low confidence',
-        'model_rejected': 'model rejected',
-        'invalid_text': 'invalid text',
-        'manual_review': 'manual review',
-        'original': 'original extraction',
-    }
-
-    name_source_label = source_labels.get(name_source, name_source.replace('_', ' '))
-    department_source_label = source_labels.get(department_source, department_source.replace('_', ' '))
-    return f"{department} via {department_source_label}; name resolved from {name_source_label}; confidence {confidence_text}"
 
 
 def build_clean_medication_rows(medications):
@@ -1538,11 +1300,7 @@ def build_clean_medication_rows(medications):
         clean_rows.append({
             'medicine_name': medication_name,
             'department': department,
-            'classification_status': 'Unknown' if department == 'Unknown' else 'Known',
             'confidence': round(float(med.get('confidence', 0.0) or 0.0), 2),
-            'name_source': med.get('name_resolution_source', 'original'),
-            'department_source': med.get('department_source', 'unknown'),
-            'resolution_explanation': build_resolution_explanation(med),
         })
 
     if clean_rows:
@@ -1561,11 +1319,7 @@ def build_clean_medication_rows(medications):
         fallback_rows.append({
             'medicine_name': medication_name,
             'department': department,
-            'classification_status': 'Unknown' if department == 'Unknown' else 'Known',
             'confidence': round(float(med.get('confidence', 0.0) or 0.0), 2),
-            'name_source': med.get('name_resolution_source', 'original'),
-            'department_source': med.get('department_source', 'unknown'),
-            'resolution_explanation': build_resolution_explanation(med),
         })
 
     return fallback_rows
@@ -1583,11 +1337,7 @@ def build_review_rows(medications):
             'original_name': (med.get('original_medication_name', medication_name) or '').strip(),
             'corrected_name': medication_name,
             'department': (med.get('department', 'Unknown') or 'Unknown').strip(),
-            'classification_status': 'Unknown' if str(med.get('department', 'Unknown') or 'Unknown').strip() == 'Unknown' else 'Known',
-            'name_source': med.get('name_resolution_source', 'original'),
-            'department_source': med.get('department_source', 'unknown'),
             'confidence': round(float(med.get('confidence', 0.0) or 0.0), 2),
-            'resolution_explanation': build_resolution_explanation(med),
         })
     return review_rows
 
@@ -1617,73 +1367,6 @@ def normalize_department_label(value):
     if normalized == 'unknown':
         return 'Unknown'
     return str(value or '').strip().title() if str(value or '').strip() else 'Unknown'
-
-
-def build_evaluation_report(eval_df, medicine_col='medicine_name', truth_col='true_department', predicted_col=None):
-    if eval_df is None or eval_df.empty:
-        raise ValueError("Evaluation CSV is empty.")
-    if medicine_col not in eval_df.columns:
-        raise ValueError(f"Missing medicine column: {medicine_col}")
-    if truth_col not in eval_df.columns:
-        raise ValueError(f"Missing ground truth column: {truth_col}")
-    if predicted_col and predicted_col not in eval_df.columns:
-        raise ValueError(f"Missing predicted column: {predicted_col}")
-
-    working_df = eval_df.copy().fillna('')
-    y_true = working_df[truth_col].apply(normalize_department_label)
-
-    if predicted_col:
-        y_pred = working_df[predicted_col].apply(normalize_department_label)
-    else:
-        y_pred = working_df[medicine_col].astype(str).apply(
-            lambda name: classify_department_details(name).get('department', 'Unknown')
-        )
-
-    labels = ['Cardiology', 'Ophthalmology', 'Unknown']
-    y_true_arr = y_true.astype(str).to_numpy()
-    y_pred_arr = y_pred.astype(str).to_numpy()
-    total = len(working_df)
-    accuracy = float((y_true_arr == y_pred_arr).mean()) if total else 0.0
-    unknown_rate = float((y_pred_arr == 'Unknown').mean()) if total else 0.0
-    true_unknown_rate = float((y_true_arr == 'Unknown').mean()) if total else 0.0
-
-    per_class_rows = []
-    for label in labels:
-        tp = int(((y_true_arr == label) & (y_pred_arr == label)).sum())
-        fp = int(((y_true_arr != label) & (y_pred_arr == label)).sum())
-        fn = int(((y_true_arr == label) & (y_pred_arr != label)).sum())
-        precision = tp / (tp + fp) if (tp + fp) else 0.0
-        recall = tp / (tp + fn) if (tp + fn) else 0.0
-        f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) else 0.0
-        support = int((y_true_arr == label).sum())
-        per_class_rows.append({
-            'class': label,
-            'precision': round(precision, 4),
-            'recall': round(recall, 4),
-            'f1_score': round(f1, 4),
-            'support': support,
-        })
-
-    macro_precision = float(np.mean([row['precision'] for row in per_class_rows])) if per_class_rows else 0.0
-    macro_recall = float(np.mean([row['recall'] for row in per_class_rows])) if per_class_rows else 0.0
-    macro_f1 = float(np.mean([row['f1_score'] for row in per_class_rows])) if per_class_rows else 0.0
-    confusion_matrix = pd.crosstab(
-        pd.Categorical(y_true, categories=labels),
-        pd.Categorical(y_pred, categories=labels),
-        dropna=False,
-    ).reindex(index=labels, columns=labels, fill_value=0)
-
-    return {
-        'total': total,
-        'accuracy': round(accuracy, 4),
-        'unknown_rate': round(unknown_rate, 4),
-        'true_unknown_rate': round(true_unknown_rate, 4),
-        'macro_precision': round(macro_precision, 4),
-        'macro_recall': round(macro_recall, 4),
-        'macro_f1': round(macro_f1, 4),
-        'per_class_df': pd.DataFrame(per_class_rows),
-        'confusion_matrix_df': confusion_matrix,
-    }
 
 
 def save_alias_corrections(review_df):
@@ -1904,11 +1587,11 @@ def store_cached_export(cache_key, payload):
         pass
 
 
-def build_analysis_cache_key(image_hash, extraction_mode, accuracy_mode):
+def build_analysis_cache_key(image_hash, extraction_mode, processing_profile):
     return "__".join([
         str(image_hash or "").strip(),
         slugify_cache_part(extraction_mode),
-        slugify_cache_part(accuracy_mode),
+        slugify_cache_part(processing_profile),
     ])
 
 
@@ -1962,8 +1645,8 @@ def invalidate_all_caches():
 
 
 def run_cached_extraction(full_image_bytes, full_image_mime_type, extraction_mode, image_hash, image=None):
-    accuracy_mode = st.session_state.get("accuracy_mode", "High Accuracy")
-    cache_key = build_analysis_cache_key(image_hash, extraction_mode, accuracy_mode)
+    processing_profile = "standard"
+    cache_key = build_analysis_cache_key(image_hash, extraction_mode, processing_profile)
     cached_result = load_cached_analysis(cache_key)
 
     if cached_result is not None:
@@ -1986,7 +1669,7 @@ def run_cached_extraction(full_image_bytes, full_image_mime_type, extraction_mod
     store_cached_analysis(cache_key, {
         'image_hash': image_hash,
         'extraction_mode': extraction_mode,
-        'accuracy_mode': accuracy_mode,
+        'processing_profile': processing_profile,
         'extracted_text': selected_result.get('extracted_text', ''),
         'medications': selected_result.get('medications', []),
         'model_used': selected_result.get('model_used', ''),
@@ -2066,21 +1749,6 @@ def build_bulk_export_bundle(bulk_df):
         'bulk_zip_data': bulk_zip_data,
     }
 
-
-def render_dashboard_section(chip, heading, copy):
-    st.markdown(f"**{chip.upper()}**")
-    st.subheader(heading)
-    st.caption(copy)
-
-
-def render_stat_cards(cards):
-    cols = st.columns(len(cards))
-    for col, card in zip(cols, cards):
-        with col:
-            st.metric(card["label"], card["value"])
-            st.caption(card["subtext"])
-
-
 def merge_uploaded_department_dataset(uploaded_dataset_df):
     """Merge a user-uploaded medicine dataset into the local seed dataset."""
     required_columns = {'medicine_name', 'department'}
@@ -2133,39 +1801,6 @@ def merge_uploaded_department_dataset(uploaded_dataset_df):
         'labels': sorted(merged_df['department'].astype(str).str.strip().unique().tolist()),
         'report_text': 'Dataset updated. Rule-based matching refreshed. No local retraining required.',
     }
-
-
-def render_dataset_upload_section(widget_prefix="main"):
-    st.subheader("Dataset Upload")
-    st.caption("Upload a CSV with `medicine_name` and `department` columns to extend the classifier dataset.")
-
-    department_dataset_file = st.file_uploader(
-        "Upload department dataset CSV",
-        type=['csv'],
-        key=f"department_dataset_uploader_{widget_prefix}"
-    )
-
-    if department_dataset_file is not None:
-        try:
-            preview_df = pd.read_csv(department_dataset_file)
-            st.caption(f"Rows found: {len(preview_df)}")
-            st.dataframe(preview_df.head(5), use_container_width=True)
-            department_dataset_file.seek(0)
-
-            if st.button("Add To Dataset", use_container_width=True, key=f"add_dataset_button_{widget_prefix}"):
-                try:
-                    upload_df = pd.read_csv(department_dataset_file)
-                    result = merge_uploaded_department_dataset(upload_df)
-                    st.success(
-                        f"Added {result['added_rows']} row(s). "
-                        f"Dataset now has {result['total_rows']} row(s). "
-                        f"Labels: {', '.join(result['labels'])}"
-                    )
-                    st.text(result['report_text'])
-                except Exception as retrain_error:
-                    st.error(f"Dataset update failed: {retrain_error}")
-        except Exception as dataset_error:
-            st.error(f"Dataset upload failed: {dataset_error}")
 
 
 def get_collection_csv_options():
@@ -2263,7 +1898,7 @@ def maybe_auto_append_collection_csv(rows_df, widget_prefix, run_token):
 
 def render_collection_csv_section(rows_df, widget_prefix):
     st.subheader("CSV Collection")
-    st.caption("Ekta CSV file choose koro. Chaile notun file create koro, chaile existing file e add koro.")
+    st.caption("Choose a CSV file. You can create a new file or append results to an existing file.")
 
     existing_files = [""] + get_collection_csv_options()
     mode_key = f"collection_csv_mode_{widget_prefix}"
@@ -2271,7 +1906,7 @@ def render_collection_csv_section(rows_df, widget_prefix):
     new_key = f"collection_csv_new_{widget_prefix}"
     auto_key = f"collection_csv_auto_{widget_prefix}"
 
-    st.caption("Step 1: File choose korun")
+    st.caption("Step 1: Choose a file")
     collection_mode = st.radio(
         "CSV file option",
         options=["Use existing CSV", "Create new CSV"],
@@ -2304,7 +1939,7 @@ def render_collection_csv_section(rows_df, widget_prefix):
     st.toggle(
         "Auto append future processed images to this CSV",
         key=auto_key,
-        help="Switch on korle next processed image/result automatically ei selected CSV file e joma hobe.",
+        help="When enabled, future processed results will be automatically added to the selected CSV file.",
     )
 
     if st.button("Append To Selected CSV", use_container_width=True, key=f"collection_csv_append_{widget_prefix}"):
@@ -2443,10 +2078,6 @@ def build_spreadsheet_export_file(df, timestamp):
     spreadsheet_mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
     export_df = df.copy().fillna('')
-    if not export_df.empty and 'classification_status' not in export_df.columns:
-        export_df['classification_status'] = export_df.get('department', '').astype(str).apply(
-            lambda value: 'Unknown' if value.strip() == 'Unknown' else 'Known'
-        )
 
     try:
         excel_buffer = io.BytesIO()
@@ -2462,27 +2093,6 @@ def build_spreadsheet_export_file(df, timestamp):
         spreadsheet_mime = "text/csv"
 
     return spreadsheet_filename, spreadsheet_label, spreadsheet_mime, spreadsheet_data
-
-
-def extract_from_uploaded_file(uploaded_file, extraction_mode):
-    if not GEMINI_API_KEY:
-        raise RuntimeError("System configuration error. Please contact support.")
-    if genai is None:
-        raise RuntimeError("google-generativeai package is not available in this environment.")
-
-    full_image_bytes = uploaded_file.getvalue()
-    if not full_image_bytes:
-        raise RuntimeError("Uploaded image is empty or could not be read.")
-
-    image = Image.open(io.BytesIO(full_image_bytes)).convert('RGB')
-    full_image_mime_type = uploaded_file.type or "image/jpeg"
-    selected_result, cropped_image = run_extraction_with_mode(
-        image,
-        full_image_bytes,
-        full_image_mime_type,
-        extraction_mode,
-    )
-    return image, selected_result, cropped_image
 
 
 def auto_crop_medication_region(image):
@@ -2531,15 +2141,135 @@ def auto_crop_medication_region(image):
 
     return rgb_image.crop((left, top, right, bottom))
 
+
+def render_empty_state(title, copy):
+    st.markdown(
+        (
+            '<div class="empty-state-card">'
+            f'<div class="empty-state-title">{escape(str(title))}</div>'
+            f'<div class="empty-state-copy">{escape(str(copy))}</div>'
+            '</div>'
+        ),
+        unsafe_allow_html=True,
+    )
+
+
+def render_upload_helper(title, copy):
+    st.markdown(
+        (
+            '<div class="upload-helper">'
+            f'<div class="upload-helper-title">{escape(str(title))}</div>'
+            f'<div class="upload-helper-copy">{escape(str(copy))}</div>'
+            '</div>'
+        ),
+        unsafe_allow_html=True,
+    )
+
+
+def render_file_meta(name, size_kb, file_type="Image"):
+    st.markdown(
+        (
+            '<div class="file-meta-card">'
+            '<div>'
+            f'<div class="file-meta-name">{escape(str(name))}</div>'
+            f'<div class="file-meta-sub">{escape(str(file_type))} file selected</div>'
+            '</div>'
+            f'<div class="file-meta-sub">{float(size_kb):.1f} KB</div>'
+            '</div>'
+        ),
+        unsafe_allow_html=True,
+    )
+
+
+def render_image_preview_card(title, copy=""):
+    copy_html = f'<div class="image-preview-sub">{escape(str(copy))}</div>' if copy else ''
+    st.markdown(
+        (
+            '<div class="image-preview-card">'
+            f'<div class="image-preview-title">{escape(str(title))}</div>'
+            f'{copy_html}'
+            '</div>'
+        ),
+        unsafe_allow_html=True,
+    )
+
+
+def render_department_badges(rows):
+    if not rows:
+        return
+    counts = {"Cardiology": 0, "Ophthalmology": 0, "Unknown": 0}
+    for row in rows:
+        department = normalize_department_label(row.get("department", "Unknown"))
+        counts[department if department in counts else "Unknown"] += 1
+    badge_classes = {
+        "Cardiology": "dept-cardiology",
+        "Ophthalmology": "dept-ophthalmology",
+        "Unknown": "dept-unknown",
+    }
+    html = ['<div class="status-badge-row">']
+    for department, count in counts.items():
+        if count:
+            html.append(
+                f'<span class="dept-badge {badge_classes[department]}">'
+                f'{escape(department)}: {count}</span>'
+            )
+    html.append('</div>')
+    st.markdown(''.join(html), unsafe_allow_html=True)
+
+
+def render_result_table(dataframe):
+    if dataframe is None or dataframe.empty:
+        render_empty_state("No rows found", "No medicine rows are available for this result yet.")
+        return
+
+    rename_map = {
+        'filename': 'Source Image',
+        'source_image': 'Source Image',
+        'medicine_name': 'Medicine Name',
+        'department': 'Department',
+    }
+    display_df = dataframe.rename(columns={k: v for k, v in rename_map.items() if k in dataframe.columns})
+
+    if 'Department' in display_df.columns:
+        def department_style(value):
+            label = normalize_department_label(value)
+            if label == "Cardiology":
+                return "background-color: #eef6ff; color: #1d4ed8; font-weight: 700;"
+            if label == "Ophthalmology":
+                return "background-color: #ecfdf5; color: #047857; font-weight: 700;"
+            return "background-color: #fff7ed; color: #c2410c; font-weight: 700;"
+
+        try:
+            styled_df = display_df.style.applymap(department_style, subset=['Department'])
+            st.dataframe(styled_df, use_container_width=True, hide_index=True)
+            return
+        except Exception:
+            pass
+
+    st.dataframe(display_df, use_container_width=True, hide_index=True)
+
 # Sidebar
 with st.sidebar:
-    st.header("ℹ️ System Information")
-    st.caption("Focused dashboard for prescription extraction, review, and export.")
+    if 'total_processed' not in st.session_state:
+        st.session_state.total_processed = 0
+
+    st.header("Dashboard")
+    st.caption("Prescription extraction, review, and export.")
+    st.selectbox(
+        "Theme",
+        options=list(THEME_OPTIONS.keys()),
+        key="dashboard_theme",
+        help="Choose the dashboard color theme.",
+    )
     st.markdown(
         f"""
         <div class="sidebar-card">
-            <div class="sidebar-kicker">Live Overview</div>
+            <div class="sidebar-kicker">Status</div>
             <div class="sidebar-grid">
+                <div class="sidebar-tile">
+                    <div class="sidebar-tile-label">Processed</div>
+                    <div class="sidebar-tile-value">{st.session_state.total_processed}</div>
+                </div>
                 <div class="sidebar-tile">
                     <div class="sidebar-tile-label">Alias Rules</div>
                     <div class="sidebar-tile-value">{len(load_alias_seed_data())}</div>
@@ -2549,29 +2279,7 @@ with st.sidebar:
                     <div class="sidebar-tile-value">{len(st.session_state.processing_history)}</div>
                 </div>
             </div>
-            <div class="sidebar-sub">Best for handwritten or noisy prescriptions when correction history matters.</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        """
-        <div class="sidebar-card">
-            <div class="sidebar-kicker">What This App Does</div>
-            <div class="sidebar-sub" style="margin-top:0;">
-                Extracts text, resolves medicine names, classifies departments, and exports clean outputs.
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        """
-        <div class="sidebar-card">
-            <div class="sidebar-kicker">Supported</div>
-            <div class="sidebar-sub" style="margin-top:0;">
-                JPG, JPEG, PNG and handwritten or printed prescriptions.
-            </div>
+            <div class="sidebar-sub">Use clear JPG, JPEG, or PNG prescription images.</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -2579,19 +2287,7 @@ with st.sidebar:
     
     st.markdown("---")
 
-    if 'total_processed' not in st.session_state:
-        st.session_state.total_processed = 0
-
-    st.metric("Total Processed", st.session_state.total_processed)
-    st.caption("Recent history keeps duplicate detection and review tracking usable.")
-    if st.session_state.processing_history:
-        st.caption("Recent History")
-        history_df = pd.DataFrame(st.session_state.processing_history)[['time', 'mode', 'file', 'rows', 'unknown']].head(5)
-        safe_dataframe(history_df, use_container_width=True)
-    
-    st.markdown("---")
-    
-    if st.button("🗑️ Clear Results", use_container_width=True):
+    if st.button("Clear Results", use_container_width=True):
         st.session_state.extracted_text = None
         st.session_state.processing_complete = False
         st.session_state.uploaded_file_name = None
@@ -2607,37 +2303,25 @@ with st.sidebar:
         st.session_state.last_analysis_from_cache = False
         st.rerun()
 
-    if st.button("🧹 Clear Cache", use_container_width=True):
+    if st.button("Clear Cache", use_container_width=True):
         invalidate_all_caches()
         st.session_state.last_analysis_from_cache = False
         st.success("Analysis cache cleared.")
     
-    st.markdown("---")
-    st.caption("© 2025 Smart Prescription System")
-
 # Main layout
+st.markdown(
+    '<div class="control-bar-title">Run Setup</div>'
+    '<div class="control-bar-copy">Choose whether you want to process one prescription image or a batch.</div>',
+    unsafe_allow_html=True,
+)
 workflow_mode = st.radio(
-    "Workflow Mode",
+    "Workflow",
     options=["Single Image", "Bulk Images"],
     horizontal=True,
 )
-st.radio(
-    "Processing Mode",
-    options=["High Accuracy", "Fast"],
-    horizontal=True,
-    key="accuracy_mode",
-    help="High Accuracy mode e extra correction/review cholbe, tai time beshi nite pare.",
-)
 
 alias_count = len(load_alias_seed_data())
-history_count = len(st.session_state.processing_history)
 current_medicine_count = len(build_clean_medication_rows(st.session_state.medications_list)) if st.session_state.medications_list else 0
-current_confidences = [
-    float(row.get('confidence', 0.0) or 0.0)
-    for row in build_clean_medication_rows(st.session_state.medications_list)
-    if float(row.get('confidence', 0.0) or 0.0) > 0
-]
-average_confidence = round(sum(current_confidences) / len(current_confidences), 2) if current_confidences else 0.0
 render_stat_cards([
     {
         'label': 'Workflow',
@@ -2645,23 +2329,18 @@ render_stat_cards([
         'subtext': 'Choose one image or a batch of images',
     },
     {
-        'label': 'Processing Mode',
-        'value': st.session_state.get("accuracy_mode", "High Accuracy"),
-        'subtext': 'Accuracy mode adds correction and fallback review',
-    },
-    {
         'label': 'Current Medicines',
         'value': current_medicine_count,
         'subtext': 'Rows ready for correction and export',
     },
     {
-        'label': 'Avg Confidence',
-        'value': f"{int(average_confidence * 100)}%",
-        'subtext': f'{alias_count} alias rule(s) and {history_count} session(s) tracked',
+        'label': 'Alias Memory',
+        'value': alias_count,
+        'subtext': 'Saved corrections available for future matching',
     },
 ])
 
-col1, col2 = st.columns([1, 1], gap="large")
+col1, col2 = st.columns([1.05, 0.95], gap="large")
 
 with col1:
     st.markdown('<div class="panel-shell">', unsafe_allow_html=True)
@@ -2671,9 +2350,11 @@ with col1:
             "Upload Prescription",
             "Select the extraction method, preview the uploaded prescription, and run the analysis pipeline.",
         )
-        with st.expander("Upload Department Dataset", expanded=False):
-            render_dataset_upload_section("main")
 
+        render_upload_helper(
+            "Upload prescription image",
+            "Drag and drop a JPG, JPEG, or PNG file here, or use Browse files. A clear, well-lit image gives better extraction results.",
+        )
         uploaded_file = st.file_uploader(
             "Select an image file",
             type=['jpg', 'jpeg', 'png'],
@@ -2686,10 +2367,10 @@ with col1:
             uploaded_file_hash = compute_bytes_hash(uploaded_file_bytes)
             duplicate_single = history_contains_image_hash(uploaded_file_hash)
             if duplicate_single:
-                st.warning("Ei image ta age process kora hoyeche. Chaile abar process korte paro.")
+                st.warning("This image has already been processed. You can process it again if needed.")
             image = Image.open(uploaded_file)
+            render_file_meta(uploaded_file.name, uploaded_file.size / 1024)
             st.image(image, use_column_width=True, caption="Uploaded Prescription")
-            st.caption(f"File: {uploaded_file.name} | Size: {uploaded_file.size/1024:.1f} KB")
 
             extraction_mode = st.radio(
                 "Extraction mode",
@@ -2707,7 +2388,7 @@ with col1:
                 cropped_preview = auto_crop_medication_region(image)
                 st.image(cropped_preview, use_column_width=True, caption="Auto-cropped medicine region")
 
-            if st.button("🔍 Extract & Analyze", type="primary", use_container_width=True, key="single_extract_button"):
+            if st.button("Extract and Analyze", type="primary", use_container_width=True, key="single_extract_button"):
                 progress_bar = st.progress(0, text="Starting... 0%")
                 try:
                     progress_bar.progress(10, text="Preparing image... 10%")
@@ -2754,9 +2435,11 @@ with col1:
             "Bulk Prescription Upload",
             "Queue multiple prescription images, process them together, and build one combined export-ready output.",
         )
-        with st.expander("Upload Department Dataset", expanded=False):
-            render_dataset_upload_section("bulk")
 
+        render_upload_helper(
+            "Upload prescription batch",
+            "Add multiple JPG, JPEG, or PNG files. The app will combine all extracted medicine rows into one export-ready table.",
+        )
         bulk_files = st.file_uploader(
             "Select multiple image files",
             type=['jpg', 'jpeg', 'png'],
@@ -2781,14 +2464,14 @@ with col1:
             bulk_hashes = [compute_bytes_hash(item.getvalue()) for item in bulk_files]
             duplicate_bulk = sum(1 for item_hash in bulk_hashes if history_contains_image_hash(item_hash))
             if duplicate_bulk:
-                st.warning(f"{duplicate_bulk} ta image ageo process kora chilo.")
-            st.caption(f"Selected files: {len(bulk_files)}")
+                st.warning(f"{duplicate_bulk} selected image(s) have already been processed.")
+            st.caption(f"{len(bulk_files)} file(s) selected")
             for bulk_file in bulk_files[:5]:
-                st.write(f"- {bulk_file.name}")
+                render_file_meta(bulk_file.name, bulk_file.size / 1024, "Batch image")
             if len(bulk_files) > 5:
                 st.caption(f"And {len(bulk_files) - 5} more file(s)")
 
-            if st.button("🔍 Process All Images", type="primary", use_container_width=True, key="bulk_process_button"):
+            if st.button("Process All Images", type="primary", use_container_width=True, key="bulk_process_button"):
                 progress_bar = st.progress(0, text="Starting bulk processing... 0%")
                 try:
                     if not GEMINI_API_KEY:
@@ -2844,9 +2527,6 @@ with col1:
                     st.session_state.total_processed += len(bulk_files)
                     progress_bar.progress(100, text="Completed 100%")
                     st.success(f"Processed {len(bulk_files)} image(s)")
-                    if processed_items:
-                        summary_df = pd.DataFrame(processed_items)
-                        st.dataframe(summary_df, use_container_width=True)
                 except Exception as e:
                     progress_bar.empty()
                     st.error(f"Bulk processing error: {str(e)}")
@@ -2863,7 +2543,7 @@ with col2:
     
     if workflow_mode == "Single Image" and st.session_state.processing_complete and st.session_state.extracted_text:
         
-        st.markdown('<div class="success-message">✓ Extraction complete</div>', unsafe_allow_html=True)
+        st.markdown('<div class="success-message">Extraction complete</div>', unsafe_allow_html=True)
         if st.session_state.last_analysis_from_cache:
             st.success("Loaded from cache")
         if st.session_state.review_save_message:
@@ -2873,38 +2553,12 @@ with col2:
         medication_preview_rows = build_clean_medication_rows(st.session_state.medications_list)
         single_output_base_df = pd.DataFrame(medication_preview_rows).fillna('')
         single_required_columns = ['medicine_name', 'department']
-        single_available_columns = [
-            column for column in (
-                list(single_output_base_df.columns)
-                if not single_output_base_df.empty
-                else [
-                    'medicine_name',
-                    'department',
-                    'classification_status',
-                    'confidence',
-                    'name_source',
-                    'department_source',
-                    'resolution_explanation',
-                ]
-            )
-            if column not in single_required_columns
-        ]
         st.markdown("#### Output Options")
-        option_col_1, option_col_2 = st.columns([0.8, 1.2], gap="large")
-        with option_col_1:
-            st.checkbox(
-                "Pure medicine name only",
-                key="single_pure_medicine_name_only",
-                help="Removes dosage and form words so the medicine column keeps only the core name.",
-            )
-        with option_col_2:
-            st.multiselect(
-                "Visible columns",
-                options=single_available_columns,
-                default=[column for column in st.session_state.single_visible_columns if column in single_available_columns],
-                key="single_visible_columns",
-                help="You can hide any optional column from the result table and CSV export.",
-            )
+        st.checkbox(
+            "Pure medicine name only",
+            key="single_pure_medicine_name_only",
+            help="Removes dosage and form words so the medicine column keeps only the core name.",
+        )
         single_display_df = prepare_output_dataframe(
             single_output_base_df,
             strict_medicine_only=st.session_state.single_pure_medicine_name_only,
@@ -2918,6 +2572,12 @@ with col2:
         )
         review_rows = build_review_rows(st.session_state.medications_list)
         review_df = pd.DataFrame(review_rows)
+        review_df = review_df.drop(
+            columns=[
+                column for column in ['resolution_explanation', 'confidence']
+                if column in review_df.columns
+            ]
+        )
         if medication_preview_rows and st.session_state.current_image_hash:
             add_processing_history_entry(
                 "Single",
@@ -2933,14 +2593,9 @@ with col2:
             left_col, right_col = st.columns([1.05, 1.25], gap="large")
             with left_col:
                 if st.session_state.current_uploaded_image is not None:
-                    st.markdown(
-                        """
-                        <div class="image-preview-card">
-                            <div class="image-preview-title">Prescription Preview</div>
-                            <div class="image-preview-sub">Original uploaded image for visual verification.</div>
-                        </div>
-                        """,
-                        unsafe_allow_html=True,
+                    render_image_preview_card(
+                        "Prescription Preview",
+                        "Original uploaded image for visual verification.",
                     )
                     st.image(st.session_state.current_uploaded_image, use_column_width=True)
                 else:
@@ -2948,21 +2603,17 @@ with col2:
 
             with right_col:
                 if medication_preview_rows:
-                    st.dataframe(single_display_df, use_container_width=True)
+                    render_department_badges(medication_preview_rows)
+                    render_result_table(single_display_df)
                 else:
-                    st.info("No medicine names found.")
-                with st.expander("Parsed Rows", expanded=False):
-                    if medication_preview_rows:
-                        st.dataframe(single_display_df, use_container_width=True)
-                    else:
-                        st.info("No parsed medicine data available.")
+                    render_empty_state("No medicine names found", "Try a clearer image or use the full-image extraction mode.")
 
         edited_review_df = review_df.copy()
         with review_tab:
             review_left, review_right = st.columns([1.15, 0.85], gap="large")
             with review_left:
                 if not review_df.empty:
-                    st.caption("Original, corrected, source, confidence dekho. Chaile corrected name ar department edit korte parba.")
+                    st.caption("Review the original name, corrected name, and source. You can edit the corrected name and department.")
                     if hasattr(st, "data_editor"):
                         edited_review_df = st.data_editor(
                             review_df,
@@ -2971,15 +2622,11 @@ with col2:
                             key="single_review_editor",
                             column_config={
                                 "original_name": st.column_config.TextColumn(disabled=True),
-                                "name_source": st.column_config.TextColumn(disabled=True),
-                                "department_source": st.column_config.TextColumn(disabled=True),
-                                "confidence": st.column_config.NumberColumn(disabled=True, format="%.2f"),
-                                "resolution_explanation": st.column_config.TextColumn(disabled=True),
                                 "department": st.column_config.SelectboxColumn(options=["Cardiology", "Ophthalmology", "Unknown"]),
                             },
                         )
                     else:
-                        st.warning("Manual review editor ei Streamlit version e available na. Table only dekhano hocche.")
+                        st.warning("The manual review editor is not available in this Streamlit version. Showing the review table only.")
                         safe_dataframe(review_df, use_container_width=True)
                     unknown_only_df = edited_review_df[edited_review_df['department'] == 'Unknown']
                     if not unknown_only_df.empty:
@@ -2999,62 +2646,20 @@ with col2:
                 else:
                     st.info("No review rows available for this extraction.")
             with review_right:
-                st.markdown(
-                    """
-                    <div class="image-preview-card">
-                        <div class="image-preview-title">Review Notes</div>
-                        <div class="image-preview-sub">Edit only the medicines that need correction. Unknown rows deserve the most attention.</div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
                 if st.session_state.current_uploaded_image is not None:
-                    st.markdown(
-                        """
-                        <div class="image-preview-card">
-                            <div class="image-preview-title">Prescription Reference</div>
-                            <div class="image-preview-sub">Use this image while correcting names and departments.</div>
-                        </div>
-                        """,
-                        unsafe_allow_html=True,
-                    )
+                    render_image_preview_card("Prescription Reference")
                     st.image(st.session_state.current_uploaded_image, use_column_width=True)
-                if st.session_state.current_cropped_image is not None:
-                    st.markdown(
-                        """
-                        <div class="image-preview-card">
-                            <div class="image-preview-title">Cropped Region</div>
-                            <div class="image-preview-sub">Auto-cropped medicine-heavy area for quick checking.</div>
-                        </div>
-                        """,
-                        unsafe_allow_html=True,
-                    )
-                    st.image(st.session_state.current_cropped_image, use_column_width=True)
 
         with analytics_tab:
             if medication_preview_rows:
-                confidence_df = single_output_base_df.copy()
-                if 'confidence' in confidence_df.columns and not confidence_df.empty:
-                    avg_conf = round(float(confidence_df['confidence'].fillna(0).astype(float).mean()), 2)
-                    high_conf = int((confidence_df['confidence'].fillna(0).astype(float) >= 0.80).sum())
-                    metric_col1, metric_col2 = st.columns(2)
-                    with metric_col1:
-                        st.metric("Average Confidence", f"{int(avg_conf * 100)}%")
-                    with metric_col2:
-                        st.metric("High Confidence Rows", high_conf)
-                summary_df = build_department_summary_df(confidence_df, image_count=1)
+                summary_df = build_department_summary_df(single_output_base_df.copy(), image_count=1)
                 safe_dataframe(summary_df, use_container_width=True)
-                st.caption("Confidence and explanation are carried through the review pipeline for traceability.")
             else:
-                st.info("No department summary available yet.")
+                render_empty_state("No summary yet", "Department summary will appear after medicine rows are extracted.")
 
         if medication_preview_rows:
             st.markdown("---")
-            st.subheader("Dataset Ready Output")
-            st.caption("Current single-image result is already in dataset format: `medicine_name, department`.")
-
             dataset_ready_df = single_core_df.copy()
-            st.dataframe(dataset_ready_df, use_container_width=True)
             collection_ready_df = dataset_ready_df.copy()
             collection_ready_df['source_image'] = st.session_state.uploaded_file_name or ''
             auto_append_result = maybe_auto_append_collection_csv(
@@ -3068,32 +2673,22 @@ with col2:
                     st.caption(f"Saved at: {auto_append_result['path']}")
                 elif auto_append_result['status'] == 'missing_target':
                     st.warning(auto_append_result['message'])
-            render_collection_csv_section(collection_ready_df[['source_image', 'medicine_name', 'department']], "single_result")
+            with st.expander("Collection and Dataset Tools", expanded=False):
+                render_collection_csv_section(collection_ready_df[['source_image', 'medicine_name', 'department']], "single_result")
 
-            if st.button("Add Current Result To Dataset", use_container_width=True, key="add_current_result_to_dataset"):
-                try:
-                    current_result_df = dataset_ready_df.copy()
-                    current_result_df["source_group"] = "Single_Image_Result"
-                    result = merge_uploaded_department_dataset(current_result_df)
-                    st.success(
-                        f"Added {result['added_rows']} row(s) from current image. "
-                        f"Dataset now has {result['total_rows']} row(s). "
-                        f"Labels: {', '.join(result['labels'])}"
-                    )
-                    st.text(result['report_text'])
-                except Exception as current_dataset_error:
-                    st.error(f"Failed to add current result to dataset: {current_dataset_error}")
-        
-        # Metrics
-        col_s1, col_s2, col_s3, col_s4 = st.columns(4)
-        with col_s1:
-            st.metric("Characters", len(st.session_state.extracted_text))
-        with col_s2:
-            st.metric("Words", len(st.session_state.extracted_text.split()))
-        with col_s3:
-            st.metric("Medications", len(st.session_state.medications_list))
-        with col_s4:
-            st.metric("Status", "Success")
+                if st.button("Add Current Result To Dataset", use_container_width=True, key="add_current_result_to_dataset"):
+                    try:
+                        current_result_df = dataset_ready_df.copy()
+                        current_result_df["source_group"] = "Single_Image_Result"
+                        result = merge_uploaded_department_dataset(current_result_df)
+                        st.success(
+                            f"Added {result['added_rows']} row(s) from current image. "
+                            f"Dataset now has {result['total_rows']} row(s). "
+                            f"Labels: {', '.join(result['labels'])}"
+                        )
+                        st.text(result['report_text'])
+                    except Exception as current_dataset_error:
+                        st.error(f"Failed to add current result to dataset: {current_dataset_error}")
         
         # Generate export files with medicine names only
         timestamp = st.session_state.export_timestamp or datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -3112,7 +2707,6 @@ with col2:
             df,
             extra_parts=[
                 st.session_state.get("workflow_mode", ""),
-                st.session_state.get("accuracy_mode", ""),
                 st.session_state.get("extraction_mode", ""),
             ],
         )
@@ -3157,18 +2751,18 @@ with col2:
 
         with col_d1:
             st.download_button(
-                label=f"📊 Download {spreadsheet_label}",
+                label=f"Download {spreadsheet_label}",
                 data=spreadsheet_data,
                 file_name=spreadsheet_filename,
                 mime=spreadsheet_mime,
                 use_container_width=True,
                 key="spreadsheet_download"
             )
-            st.caption(f"✅ {len(export_rows)} medication(s)")
+            st.caption(f"{len(export_rows)} medication(s)")
         
         with col_d2:
             st.download_button(
-                label="📄 Download PDF",
+                label="Download PDF",
                 data=pdf_data,
                 file_name=pdf_filename,
                 mime="application/pdf",
@@ -3176,33 +2770,19 @@ with col2:
                 key="pdf_download"
             )
         
-        if st.button("💾 Save Files To Output Folder", use_container_width=True):
+        if st.button("Save Files To Output Folder", use_container_width=True):
             os.makedirs('output', exist_ok=True)
             with open(f"output/{spreadsheet_filename}", 'wb') as f:
                 f.write(spreadsheet_data)
             with open(f"output/{pdf_filename}", 'wb') as f:
                 f.write(pdf_data)
-            st.success("💾 Files saved to output folder")
+            st.success("Files saved to output folder")
 
-        # Show export preview
-        with st.expander("Preview Export Data", expanded=False):
-            st.dataframe(df, use_container_width=True)
-            st.caption(f"Total medications captured: {len(export_rows)}")
-
-        
     elif workflow_mode == "Single Image":
-        st.info("👈 Upload a prescription image and click 'Extract & Analyze'")
-        st.markdown("""
-        **Instructions:**
-        1. Upload a clear image of the prescription
-        2. Choose an extraction mode and click 'Extract & Analyze'
-        3. Review extracted information
-        4. Download as spreadsheet or PDF
-        
-        **The spreadsheet and PDF files will contain medicine names with departments**
-        
-        **Supported images:** JPG, JPEG, PNG
-        """)
+        render_empty_state(
+            "No extraction yet",
+            "Upload a prescription image on the left, choose an extraction mode, then click Extract and Analyze.",
+        )
     else:
         render_dashboard_section(
             "Batch Output",
@@ -3215,26 +2795,12 @@ with col2:
                 columns=['filename', 'medicine_name', 'department']
             ).fillna('')
             bulk_required_columns = ['filename', 'medicine_name', 'department']
-            bulk_available_columns = [
-                column for column in (list(bulk_df.columns) + ['classification_status'])
-                if column not in bulk_required_columns
-            ]
             st.markdown("#### Output Options")
-            bulk_option_col_1, bulk_option_col_2 = st.columns([0.8, 1.2], gap="large")
-            with bulk_option_col_1:
-                st.checkbox(
-                    "Pure medicine name only",
-                    key="bulk_pure_medicine_name_only",
-                    help="Removes dosage and form words so the medicine column keeps only the core name.",
-                )
-            with bulk_option_col_2:
-                st.multiselect(
-                    "Visible columns",
-                    options=bulk_available_columns,
-                    default=[column for column in st.session_state.bulk_visible_columns if column in bulk_available_columns],
-                    key="bulk_visible_columns",
-                    help="Hide any optional column from the bulk result table and CSV export.",
-                )
+            st.checkbox(
+                "Pure medicine name only",
+                key="bulk_pure_medicine_name_only",
+                help="Removes dosage and form words so the medicine column keeps only the core name.",
+            )
             bulk_display_df = prepare_output_dataframe(
                 bulk_df,
                 strict_medicine_only=st.session_state.bulk_pure_medicine_name_only,
@@ -3271,14 +2837,14 @@ with col2:
                     st.caption(f"Saved at: {auto_append_result['path']}")
                 elif auto_append_result['status'] == 'missing_target':
                     st.warning(auto_append_result['message'])
-            render_collection_csv_section(bulk_collection_df[['source_image', 'medicine_name', 'department']], "bulk_result")
+            with st.expander("Collection and Dataset Tools", expanded=False):
+                render_collection_csv_section(bulk_collection_df[['source_image', 'medicine_name', 'department']], "bulk_result")
 
             bulk_timestamp = st.session_state.bulk_export_timestamp or datetime.now().strftime('%Y%m%d_%H%M%S')
             bulk_export_signature = build_export_signature(
                 bulk_export_df[['filename', 'medicine_name', 'department']].fillna('') if {'filename', 'medicine_name', 'department'}.issubset(bulk_export_df.columns) else bulk_df[['filename', 'medicine_name', 'department']].fillna(''),
                 extra_parts=[
                     st.session_state.get("workflow_mode", ""),
-                    st.session_state.get("accuracy_mode", ""),
                 ],
             )
             bulk_export_cache_key = build_export_cache_key("bulk_export", bulk_export_signature)
@@ -3312,15 +2878,15 @@ with col2:
             bulk_results_tab, bulk_summary_tab, bulk_export_tab = st.tabs(["Combined Rows", "Summary", "Export"])
 
             with bulk_results_tab:
-                st.dataframe(bulk_display_df, use_container_width=True)
+                render_department_badges(st.session_state.bulk_results)
+                render_result_table(bulk_display_df)
 
             with bulk_summary_tab:
                 safe_dataframe(bulk_summary_df, use_container_width=True)
-                st.caption("Combined rows from all uploaded images in dataset-ready format.")
 
             with bulk_export_tab:
                 st.download_button(
-                    label=f"📊 Download Bulk {bulk_label}",
+                    label=f"Download Bulk {bulk_label}",
                     data=bulk_data,
                     file_name=bulk_filename,
                     mime=bulk_mime,
@@ -3336,121 +2902,31 @@ with col2:
                     key="bulk_zip_download_button",
                 )
 
-                if st.button("Add Bulk Result To Dataset", use_container_width=True, key="add_bulk_result_to_dataset"):
-                    try:
-                        bulk_dataset_df = bulk_df[['medicine_name', 'department']].copy()
-                        bulk_dataset_df['source_group'] = 'Bulk_Image_Result'
-                        result = merge_uploaded_department_dataset(bulk_dataset_df)
-                        st.success(
-                            f"Added {result['added_rows']} row(s) from bulk result. "
-                            f"Dataset now has {result['total_rows']} row(s). "
-                            f"Labels: {', '.join(result['labels'])}"
-                        )
-                        st.text(result['report_text'])
-                    except Exception as bulk_dataset_error:
-                        st.error(f"Failed to add bulk result to dataset: {bulk_dataset_error}")
+                with st.expander("Dataset Tools", expanded=False):
+                    if st.button("Add Bulk Result To Dataset", use_container_width=True, key="add_bulk_result_to_dataset"):
+                        try:
+                            bulk_dataset_df = bulk_df[['medicine_name', 'department']].copy()
+                            bulk_dataset_df['source_group'] = 'Bulk_Image_Result'
+                            result = merge_uploaded_department_dataset(bulk_dataset_df)
+                            st.success(
+                                f"Added {result['added_rows']} row(s) from bulk result. "
+                                f"Dataset now has {result['total_rows']} row(s). "
+                                f"Labels: {', '.join(result['labels'])}"
+                            )
+                            st.text(result['report_text'])
+                        except Exception as bulk_dataset_error:
+                            st.error(f"Failed to add bulk result to dataset: {bulk_dataset_error}")
         else:
-            st.info("👈 Upload multiple prescription images and click 'Process All Images'")
-            st.markdown("""
-            **Bulk mode does this:**
-            1. Takes multiple prescription images
-            2. Extracts medicine names from each image
-            3. Classifies each medicine by department
-            4. Combines all rows into one dataset-ready table
-            5. Exports one spreadsheet for all uploaded files
-            """)
-
-    with st.expander("Evaluation Dashboard", expanded=False):
-        st.caption("Upload a labeled CSV to measure classification quality with precision, recall, F1 score, confusion matrix, and Unknown rate.")
-        evaluation_file = st.file_uploader(
-            "Upload evaluation CSV",
-            type=['csv'],
-            key="evaluation_csv_uploader",
-        )
-        if evaluation_file is not None:
-            try:
-                evaluation_df = pd.read_csv(evaluation_file)
-                evaluation_columns = list(evaluation_df.columns)
-
-                medicine_defaults = ['medicine_name', 'corrected_name', 'name', 'medication_name']
-                truth_defaults = ['true_department', 'department', 'label', 'ground_truth']
-                medicine_default_index = next((evaluation_columns.index(col) for col in medicine_defaults if col in evaluation_columns), 0)
-                truth_default_index = next((evaluation_columns.index(col) for col in truth_defaults if col in evaluation_columns), 0)
-
-                with st.form("evaluation_dashboard_form"):
-                    eval_left, eval_right = st.columns(2)
-                    with eval_left:
-                        medicine_col = st.selectbox(
-                            "Medicine column",
-                            options=evaluation_columns,
-                            index=medicine_default_index if evaluation_columns else 0,
-                        )
-                        truth_col = st.selectbox(
-                            "Ground truth column",
-                            options=evaluation_columns,
-                            index=truth_default_index if evaluation_columns else 0,
-                        )
-                    with eval_right:
-                        predicted_options = ["(Predict from medicine column)"] + evaluation_columns
-                        predicted_default_index = 0
-                        if 'predicted_department' in evaluation_columns:
-                            predicted_default_index = predicted_options.index('predicted_department')
-                        predicted_choice = st.selectbox(
-                            "Predicted column",
-                            options=predicted_options,
-                            index=predicted_default_index,
-                            help="Leave as prediction mode if the file has no model output column.",
-                        )
-                        st.caption("If no predicted column is chosen, the app will generate predictions from medicine names.")
-
-                    submitted = st.form_submit_button("Run Evaluation", use_container_width=True)
-
-                if submitted:
-                    predicted_col = None if predicted_choice == "(Predict from medicine column)" else predicted_choice
-                    try:
-                        st.session_state.evaluation_report = build_evaluation_report(
-                            evaluation_df,
-                            medicine_col=medicine_col,
-                            truth_col=truth_col,
-                            predicted_col=predicted_col,
-                        )
-                        st.session_state.evaluation_source_shape = evaluation_df.shape
-                    except Exception as evaluation_error:
-                        st.session_state.evaluation_report = None
-                        st.error(f"Evaluation failed: {evaluation_error}")
-
-                if st.session_state.evaluation_report:
-                    report = st.session_state.evaluation_report
-                    metric_col1, metric_col2, metric_col3, metric_col4 = st.columns(4)
-                    with metric_col1:
-                        st.metric("Accuracy", f"{report['accuracy']:.2%}")
-                    with metric_col2:
-                        st.metric("Macro F1", f"{report['macro_f1']:.2%}")
-                    with metric_col3:
-                        st.metric("Unknown Rate", f"{report['unknown_rate']:.2%}")
-                    with metric_col4:
-                        st.metric("Samples", report['total'])
-
-                    st.caption("Per-class performance")
-                    st.dataframe(report['per_class_df'], use_container_width=True)
-
-                    st.caption("Confusion matrix")
-                    st.dataframe(report['confusion_matrix_df'], use_container_width=True)
-
-                    st.caption(
-                        f"True Unknown share: {report['true_unknown_rate']:.2%} | "
-                        f"Evaluation source: {st.session_state.evaluation_source_shape[0]} rows"
-                    )
-            except Exception as evaluation_load_error:
-                st.error(f"Could not load evaluation file: {evaluation_load_error}")
+            render_empty_state(
+                "No bulk results yet",
+                "Upload multiple prescription images on the left, then click Process All Images.",
+            )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: gray; font-size: 12px;'>"
-    "Smart Prescription Analysis System | Medicine Department Export | Spreadsheet and PDF"
-    "</div>",
+    '<div class="dashboard-footer">Prescription Data Extraction Dashboard | Medicine Department Export | Spreadsheet and PDF</div>',
     unsafe_allow_html=True
 )
