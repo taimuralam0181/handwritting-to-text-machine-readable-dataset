@@ -1,0 +1,17 @@
+[Unit]
+Description=Prescription Data Extraction Dashboard
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/prescription-dashboard/main_project
+ExecStart=/opt/prescription-dashboard/main_project/deploy/run_streamlit.sh
+Restart=always
+RestartSec=5
+User=www-data
+Group=www-data
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+

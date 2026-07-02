@@ -8,9 +8,13 @@ output/
 models/
 *.zip
 *.log
+users.db
 .streamlit/
 .pytest_cache/
 .mypy_cache/
 .DS_Store
 Thumbs.db
-(Set-ExecutionPolicy
+.vscode/
+main_project/training_dataset/
+main_project/__pycache__/
+main_project/ui/__pycache__/

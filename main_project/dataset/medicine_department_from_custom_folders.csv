@@ -1,0 +1,1444 @@
+medicine_name,department,source_file
+Cap. Cilnidipine 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Perindopril 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Rosuvastatin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Dabigatran 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Cilnidipine 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Isosorbide Mononitrate 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Spironolactone 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Fenofibrate 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Valsartan 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Torsemide 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Furosemide 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Bisoprolol 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Digoxin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nifedipine 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Rivaroxaban 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atorvastatin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Verapamil 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Nitroglycerin 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Hydrochlorothiazide 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Aspirin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Amiodarone 20mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Amlodipine 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Olmesartan 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Apixaban 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Metoprolol 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Enalapril 100mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Clopidogrel 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ramipril 80mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Warfarin 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Heparin 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Telmisartan 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Lisinopril 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Ivabradine 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Atenolol 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Carvedilol 25mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Sacubitril 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Simvastatin 10mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Losartan 75mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Nebivolol 40mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Cap. Ecosprin 2.5mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Tab. Diltiazem 50mg,Cardiology,dataset/cardiology_custom_20260625_200149/line_crops/labels.csv
+Difluprednate 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Sodium Cromoglicate Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Sodium Cromoglicate Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Sodium Cromoglicate Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Sodium Cromoglicate Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acetazolamide Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluorometholone 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gentamicin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carbachol 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Flurbiprofen 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Amphotericin B 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ganciclovir Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dexamethasone 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Netarsudil 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Sodium Cromoglicate Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ciprofloxacin 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Emedastine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Apraclonidine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tafluprost 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brimonidine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Voriconazole Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levobunolol 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ripasudil 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Travoprost 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ofloxacin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketotifen 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Gatifloxacin 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Latanoprost 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Alcaftadine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Rimexolone 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fluconazole Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Carteolol Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bimatoprost 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bepotastine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 0.005% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 0.01% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azithromycin Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Sodium Cromoglicate Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Chloramphenicol Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Difluprednate Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Bromfenac Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dipivefrin 0.03% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nepafenac 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Erythromycin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Epinastine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Hydrocortisone 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Brinzolamide 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Betaxolol Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Acyclovir 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Methazolamide 1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Timolol 0.004% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Azelastine 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Prednisolone Acetate Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Tobramycin Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Moxifloxacin 0.1% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Loteprednol 0.15% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Diclofenac Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine Ophthalmic Gel,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Olopatadine Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Trifluridine Ophthalmic Suspension,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Levofloxacin Eye Ointment,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Fusidic Acid 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Natamycin 0.25% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Pilocarpine 5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Besifloxacin Ophthalmic Solution,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Nedocromil 2% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Dorzolamide 0.5% Eye Drops,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
+Ketorolac Intravitreal Injection,Ophthalmology,dataset/ophthalmology_custom_20260625_202639/line_crops/labels.csv
