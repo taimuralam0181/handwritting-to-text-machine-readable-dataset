@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: prescription-dashboard
+    env: python
+    plan: free
+    buildCommand: pip install -r main_project/requirements-render.txt
+    startCommand: streamlit run main_project/app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true --browser.gatherUsageStats false
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL_NAME
+        value: gemma-4-31b-it
+
