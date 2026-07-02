@@ -396,13 +396,36 @@ def generate_with_gemini(prompt: str, image_bytes: bytes, mime_type: str) -> tup
     raise HTTPException(status_code=502, detail=f"Gemini extraction failed after trying {tried_models}: {last_error}")
 
 
-def extract_prescription(image_bytes: bytes, mime_type: str, filename: str | None = None) -> dict:
+def normalize_image_for_extraction(image_bytes: bytes) -> tuple[bytes, str, dict]:
     try:
-        Image.open(io.BytesIO(image_bytes)).verify()
+        image = Image.open(io.BytesIO(image_bytes))
+        image.load()
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid image file.")
 
-    extracted_text, model_name = generate_with_gemini(EXTRACTION_PROMPT, image_bytes, mime_type)
+    original_size = image.size
+    if image.mode not in ("RGB", "L"):
+        image = image.convert("RGB")
+    elif image.mode == "L":
+        image = image.convert("RGB")
+
+    max_side = 1600
+    if max(image.size) > max_side:
+        image.thumbnail((max_side, max_side), Image.Resampling.LANCZOS)
+
+    output = io.BytesIO()
+    image.save(output, format="JPEG", quality=85, optimize=True)
+    normalized_bytes = output.getvalue()
+    return normalized_bytes, "image/jpeg", {
+        "original_size": {"width": original_size[0], "height": original_size[1]},
+        "processed_size": {"width": image.size[0], "height": image.size[1]},
+        "processed_bytes": len(normalized_bytes),
+    }
+
+
+def extract_prescription(image_bytes: bytes, mime_type: str, filename: str | None = None) -> dict:
+    normalized_bytes, normalized_mime_type, image_info = normalize_image_for_extraction(image_bytes)
+    extracted_text, model_name = generate_with_gemini(EXTRACTION_PROMPT, normalized_bytes, normalized_mime_type)
     medications = extract_medications_list(extracted_text)
     rows = build_clean_rows(medications, source_image=filename)
     return {
@@ -411,6 +434,7 @@ def extract_prescription(image_bytes: bytes, mime_type: str, filename: str | Non
         "medicine_count": len(rows),
         "medicines": rows,
         "model": model_name,
+        "image_info": image_info,
     }
 
 
