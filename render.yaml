@@ -11,7 +11,7 @@ services:
       - key: GEMINI_API_KEY
         sync: false
       - key: GEMINI_MODEL_NAME
-        value: gemma-4-31b-it
+        value: gemini-2.5-flash
   - type: web
     name: prescription-api
     env: python
@@ -24,4 +24,4 @@ services:
       - key: GEMINI_API_KEY
         sync: false
       - key: GEMINI_MODEL_NAME
-        value: gemma-4-31b-it
+        value: gemini-2.5-flash

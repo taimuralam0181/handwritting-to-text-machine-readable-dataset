@@ -40,7 +40,17 @@ load_dotenv(ROOT_DIR / ".env")
 load_dotenv(API_DIR / ".env")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemma-4-31b-it").strip() or "gemma-4-31b-it"
+GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+GEMINI_FALLBACK_MODELS = [
+    model_name
+    for model_name in (
+        GEMINI_MODEL_NAME,
+        "gemini-2.5-flash",
+        "gemini-2.0-flash",
+        "gemini-1.5-flash",
+    )
+    if model_name
+]
 
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
@@ -363,24 +373,27 @@ def build_clean_rows(medications: list[dict], source_image: str | None = None) -
     return rows
 
 
-def generate_with_gemini(prompt: str, image_bytes: bytes, mime_type: str) -> str:
+def generate_with_gemini(prompt: str, image_bytes: bytes, mime_type: str) -> tuple[str, str]:
     if not GEMINI_API_KEY:
         raise HTTPException(status_code=500, detail="GEMINI_API_KEY is not configured on the server.")
     last_error: Exception | None = None
-    for attempt in range(3):
-        try:
-            model = genai.GenerativeModel(GEMINI_MODEL_NAME)
-            response = model.generate_content([prompt, {"mime_type": mime_type, "data": image_bytes}])
-            text = getattr(response, "text", "") or ""
-            if text.strip():
-                return text
-        except Exception as error:
-            last_error = error
-            if any(fragment in str(error).lower() for fragment in ("500", "internal", "unavailable")):
-                time.sleep(1.2 * (attempt + 1))
-                continue
-            break
-    raise HTTPException(status_code=502, detail=f"Gemini extraction failed: {last_error}")
+    tried_models: list[str] = []
+    for model_name in dict.fromkeys(GEMINI_FALLBACK_MODELS):
+        tried_models.append(model_name)
+        for attempt in range(3):
+            try:
+                model = genai.GenerativeModel(model_name)
+                response = model.generate_content([prompt, {"mime_type": mime_type, "data": image_bytes}])
+                text = getattr(response, "text", "") or ""
+                if text.strip():
+                    return text, model_name
+            except Exception as error:
+                last_error = error
+                if any(fragment in str(error).lower() for fragment in ("500", "internal", "unavailable")):
+                    time.sleep(1.2 * (attempt + 1))
+                    continue
+                break
+    raise HTTPException(status_code=502, detail=f"Gemini extraction failed after trying {tried_models}: {last_error}")
 
 
 def extract_prescription(image_bytes: bytes, mime_type: str, filename: str | None = None) -> dict:
@@ -389,7 +402,7 @@ def extract_prescription(image_bytes: bytes, mime_type: str, filename: str | Non
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid image file.")
 
-    extracted_text = generate_with_gemini(EXTRACTION_PROMPT, image_bytes, mime_type)
+    extracted_text, model_name = generate_with_gemini(EXTRACTION_PROMPT, image_bytes, mime_type)
     medications = extract_medications_list(extracted_text)
     rows = build_clean_rows(medications, source_image=filename)
     return {
@@ -397,7 +410,7 @@ def extract_prescription(image_bytes: bytes, mime_type: str, filename: str | Non
         "extracted_text": extracted_text,
         "medicine_count": len(rows),
         "medicines": rows,
-        "model": GEMINI_MODEL_NAME,
+        "model": model_name,
     }
 
 
