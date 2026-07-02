@@ -11,7 +11,7 @@ import streamlit as st
 
 AUTH_DB_PATH = Path(__file__).resolve().parent / "users.db"
 LOGIN_CSS_PATH = Path(__file__).resolve().parent / "ui" / "login.css"
-SESSION_DAYS = 7
+SESSION_DAYS = 14
 
 
 def apply_login_styles():
