@@ -15,9 +15,10 @@ from typing import Annotated
 
 import google.generativeai as genai
 from dotenv import load_dotenv
-from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, UploadFile
+from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from PIL import Image
 from pydantic import BaseModel, Field
 
@@ -57,6 +58,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+bearer_scheme = HTTPBearer(auto_error=False)
 
 
 EXTRACTION_PROMPT = """Read this prescription image and extract only the prescribed medicines.
@@ -226,10 +229,10 @@ def create_session(user_id: int) -> str:
     return token
 
 
-def get_current_user(authorization: Annotated[str | None, Header()] = None) -> dict:
-    if not authorization or not authorization.lower().startswith("bearer "):
+def get_current_user(credentials: Annotated[HTTPAuthorizationCredentials | None, Depends(bearer_scheme)] = None) -> dict:
+    if credentials is None or credentials.scheme.lower() != "bearer":
         raise HTTPException(status_code=401, detail="Missing bearer token.")
-    token = authorization.split(" ", 1)[1].strip()
+    token = credentials.credentials.strip()
     if not token:
         raise HTTPException(status_code=401, detail="Missing bearer token.")
 
