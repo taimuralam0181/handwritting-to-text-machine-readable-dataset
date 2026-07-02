@@ -12,3 +12,16 @@ services:
         sync: false
       - key: GEMINI_MODEL_NAME
         value: gemma-4-31b-it
+  - type: web
+    name: prescription-api
+    env: python
+    plan: free
+    buildCommand: pip install -r api_backend/requirements.txt
+    startCommand: uvicorn api_backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL_NAME
+        value: gemma-4-31b-it
