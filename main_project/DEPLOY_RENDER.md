@@ -42,13 +42,13 @@ Environment variables:
 
 ```text
 GEMINI_API_KEY=your_api_key_here
-GEMINI_MODEL_NAME=gemma-4-31b-it
+GEMINI_MODEL_NAME=gemini-2.5-flash
+DATABASE_URL=postgres_connection_string
 ```
 
 ## Notes
 
 - Free Render services may sleep when inactive.
 - First request after sleep can be slow.
-- Runtime `users.db` and generated CSV files are stored on the Render instance and may not be permanent on free hosting.
-- For permanent user/database storage, use a paid persistent disk or move auth/workspace data to PostgreSQL.
-
+- Website and mobile app accounts are permanent when both services share the same PostgreSQL `DATABASE_URL`.
+- Generated CSV files are still stored on the Render instance and may not be permanent on free hosting unless moved to persistent storage.

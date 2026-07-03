@@ -80,8 +80,13 @@ Set these Render environment variables:
 
 ```text
 GEMINI_API_KEY=your_api_key
-GEMINI_MODEL_NAME=gemma-4-31b-it
+GEMINI_MODEL_NAME=gemini-2.5-flash
+DATABASE_URL=postgres_connection_string
 ```
+
+`DATABASE_URL` should be shared with the Streamlit dashboard service so website and
+mobile app users use the same persistent account database. Without `DATABASE_URL`,
+the API falls back to local SQLite for development.
 
 ## Environment
 

@@ -8,10 +8,21 @@ from pathlib import Path
 
 import streamlit as st
 
+try:
+    import psycopg
+    from psycopg import errors as pg_errors
+    from psycopg.rows import dict_row
+except ImportError:
+    psycopg = None
+    pg_errors = None
+    dict_row = None
+
 
 AUTH_DB_PATH = Path(__file__).resolve().parent / "users.db"
 LOGIN_CSS_PATH = Path(__file__).resolve().parent / "ui" / "login.css"
 SESSION_DAYS = 14
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
+USE_POSTGRES = bool(DATABASE_URL)
 
 
 def apply_login_styles():
@@ -20,33 +31,76 @@ def apply_login_styles():
 
 
 def get_connection():
+    if USE_POSTGRES:
+        if psycopg is None:
+            raise RuntimeError("DATABASE_URL is set but psycopg is not installed.")
+        return psycopg.connect(DATABASE_URL, row_factory=dict_row)
     return sqlite3.connect(AUTH_DB_PATH)
+
+
+def db_execute(connection, query, params=()):
+    if USE_POSTGRES:
+        query = query.replace("?", "%s")
+    return connection.execute(query, params)
+
+
+def is_unique_violation(error):
+    if isinstance(error, sqlite3.IntegrityError):
+        return True
+    return bool(pg_errors is not None and isinstance(error, pg_errors.UniqueViolation))
 
 
 def initialize_auth_database():
     with get_connection() as connection:
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                full_name TEXT NOT NULL,
-                email TEXT NOT NULL UNIQUE,
-                password_hash TEXT NOT NULL,
-                created_at TEXT NOT NULL
+        if USE_POSTGRES:
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS users (
+                    id SERIAL PRIMARY KEY,
+                    full_name TEXT NOT NULL,
+                    email TEXT NOT NULL UNIQUE,
+                    password_hash TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
             )
-            """
-        )
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS login_sessions (
-                token_hash TEXT PRIMARY KEY,
-                user_id INTEGER NOT NULL,
-                expires_at TEXT NOT NULL,
-                created_at TEXT NOT NULL,
-                FOREIGN KEY(user_id) REFERENCES users(id)
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS login_sessions (
+                    token_hash TEXT PRIMARY KEY,
+                    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                    expires_at TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
             )
-            """
-        )
+        else:
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    full_name TEXT NOT NULL,
+                    email TEXT NOT NULL UNIQUE,
+                    password_hash TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
+            )
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS login_sessions (
+                    token_hash TEXT PRIMARY KEY,
+                    user_id INTEGER NOT NULL,
+                    expires_at TEXT NOT NULL,
+                    created_at TEXT NOT NULL,
+                    FOREIGN KEY(user_id) REFERENCES users(id)
+                )
+                """,
+            )
 
 
 def normalize_email(email):
@@ -86,7 +140,8 @@ def create_user(full_name, email, password):
 
     try:
         with get_connection() as connection:
-            connection.execute(
+            db_execute(
+                connection,
                 """
                 INSERT INTO users (full_name, email, password_hash, created_at)
                 VALUES (?, ?, ?, ?)
@@ -94,15 +149,19 @@ def create_user(full_name, email, password):
                 (full_name, email, hash_password(password), datetime.now().isoformat(timespec="seconds")),
             )
         return True, "Registration successful. You can sign in now."
-    except sqlite3.IntegrityError:
-        return False, "An account already exists for this email."
+    except Exception as error:
+        if is_unique_violation(error):
+            return False, "An account already exists for this email."
+        raise
 
 
 def authenticate_user(email, password):
     email = normalize_email(email)
     with get_connection() as connection:
-        connection.row_factory = sqlite3.Row
-        user = connection.execute(
+        if not USE_POSTGRES:
+            connection.row_factory = sqlite3.Row
+        user = db_execute(
+            connection,
             "SELECT id, full_name, email, password_hash FROM users WHERE email = ?",
             (email,),
         ).fetchone()
@@ -127,7 +186,8 @@ def reset_user_password(email, new_password):
         return False, "Password must be at least 6 characters."
 
     with get_connection() as connection:
-        cursor = connection.execute(
+        cursor = db_execute(
+            connection,
             """
             UPDATE users
             SET password_hash = ?
@@ -138,7 +198,8 @@ def reset_user_password(email, new_password):
         if cursor.rowcount == 0:
             return False, "No account found for this email."
 
-        connection.execute(
+        db_execute(
+            connection,
             """
             DELETE FROM login_sessions
             WHERE user_id = (SELECT id FROM users WHERE email = ?)
@@ -158,7 +219,8 @@ def create_login_session(user_id):
     now = datetime.now()
     expires_at = now + timedelta(days=SESSION_DAYS)
     with get_connection() as connection:
-        connection.execute(
+        db_execute(
+            connection,
             """
             INSERT INTO login_sessions (token_hash, user_id, expires_at, created_at)
             VALUES (?, ?, ?, ?)
@@ -204,8 +266,10 @@ def authenticate_session_token(token):
         return None
 
     with get_connection() as connection:
-        connection.row_factory = sqlite3.Row
-        row = connection.execute(
+        if not USE_POSTGRES:
+            connection.row_factory = sqlite3.Row
+        row = db_execute(
+            connection,
             """
             SELECT login_sessions.token_hash, login_sessions.expires_at,
                    users.id, users.full_name, users.email
@@ -225,7 +289,7 @@ def authenticate_session_token(token):
             expires_at = datetime.min
 
         if expires_at <= datetime.now():
-            connection.execute("DELETE FROM login_sessions WHERE token_hash = ?", (row["token_hash"],))
+            db_execute(connection, "DELETE FROM login_sessions WHERE token_hash = ?", (row["token_hash"],))
             return None
 
     return {
@@ -240,7 +304,7 @@ def delete_login_session(token):
     if not token:
         return
     with get_connection() as connection:
-        connection.execute("DELETE FROM login_sessions WHERE token_hash = ?", (hash_session_token(token),))
+        db_execute(connection, "DELETE FROM login_sessions WHERE token_hash = ?", (hash_session_token(token),))
 
 
 def render_brand_panel():

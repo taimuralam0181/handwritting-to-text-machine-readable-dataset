@@ -22,6 +22,15 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from PIL import Image
 from pydantic import BaseModel, Field
 
+try:
+    import psycopg
+    from psycopg import errors as pg_errors
+    from psycopg.rows import dict_row
+except ImportError:  # Local SQLite mode does not need psycopg installed.
+    psycopg = None
+    pg_errors = None
+    dict_row = None
+
 
 API_DIR = Path(__file__).resolve().parent
 ROOT_DIR = API_DIR.parent
@@ -39,6 +48,8 @@ SESSION_DAYS = 14
 load_dotenv(ROOT_DIR / ".env")
 load_dotenv(API_DIR / ".env")
 
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
+USE_POSTGRES = bool(DATABASE_URL)
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 GEMINI_MODEL_NAME = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
 GEMINI_FALLBACK_MODELS = [
@@ -139,47 +150,103 @@ def ensure_storage() -> None:
     WORKSPACE_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def get_connection() -> sqlite3.Connection:
+def get_connection():
     ensure_storage()
+    if USE_POSTGRES:
+        if psycopg is None:
+            raise RuntimeError("DATABASE_URL is set but psycopg is not installed.")
+        return psycopg.connect(DATABASE_URL, row_factory=dict_row)
     return sqlite3.connect(DB_PATH)
+
+
+def db_execute(connection, query: str, params: tuple = ()):
+    if USE_POSTGRES:
+        query = query.replace("?", "%s")
+    return connection.execute(query, params)
+
+
+def is_unique_violation(error: Exception) -> bool:
+    if isinstance(error, sqlite3.IntegrityError):
+        return True
+    return bool(pg_errors is not None and isinstance(error, pg_errors.UniqueViolation))
 
 
 def initialize_database() -> None:
     with get_connection() as connection:
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                full_name TEXT NOT NULL,
-                email TEXT NOT NULL UNIQUE,
-                password_hash TEXT NOT NULL,
-                created_at TEXT NOT NULL
+        if USE_POSTGRES:
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS users (
+                    id SERIAL PRIMARY KEY,
+                    full_name TEXT NOT NULL,
+                    email TEXT NOT NULL UNIQUE,
+                    password_hash TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
             )
-            """
-        )
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS sessions (
-                token_hash TEXT PRIMARY KEY,
-                user_id INTEGER NOT NULL,
-                expires_at TEXT NOT NULL,
-                created_at TEXT NOT NULL,
-                FOREIGN KEY(user_id) REFERENCES users(id)
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS sessions (
+                    token_hash TEXT PRIMARY KEY,
+                    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                    expires_at TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
             )
-            """
-        )
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS workspaces (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user_id INTEGER NOT NULL,
-                name TEXT NOT NULL,
-                csv_filename TEXT NOT NULL,
-                created_at TEXT NOT NULL,
-                FOREIGN KEY(user_id) REFERENCES users(id)
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS workspaces (
+                    id SERIAL PRIMARY KEY,
+                    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                    name TEXT NOT NULL,
+                    csv_filename TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
             )
-            """
-        )
+        else:
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS users (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    full_name TEXT NOT NULL,
+                    email TEXT NOT NULL UNIQUE,
+                    password_hash TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                )
+                """,
+            )
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS sessions (
+                    token_hash TEXT PRIMARY KEY,
+                    user_id INTEGER NOT NULL,
+                    expires_at TEXT NOT NULL,
+                    created_at TEXT NOT NULL,
+                    FOREIGN KEY(user_id) REFERENCES users(id)
+                )
+                """,
+            )
+            db_execute(
+                connection,
+                """
+                CREATE TABLE IF NOT EXISTS workspaces (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id INTEGER NOT NULL,
+                    name TEXT NOT NULL,
+                    csv_filename TEXT NOT NULL,
+                    created_at TEXT NOT NULL,
+                    FOREIGN KEY(user_id) REFERENCES users(id)
+                )
+                """,
+            )
 
 
 @app.on_event("startup")
@@ -224,7 +291,8 @@ def create_session(user_id: int) -> str:
     now = datetime.now()
     expires_at = now + timedelta(days=SESSION_DAYS)
     with get_connection() as connection:
-        connection.execute(
+        db_execute(
+            connection,
             """
             INSERT INTO sessions (token_hash, user_id, expires_at, created_at)
             VALUES (?, ?, ?, ?)
@@ -247,8 +315,10 @@ def get_current_user(credentials: Annotated[HTTPAuthorizationCredentials | None,
         raise HTTPException(status_code=401, detail="Missing bearer token.")
 
     with get_connection() as connection:
-        connection.row_factory = sqlite3.Row
-        row = connection.execute(
+        if not USE_POSTGRES:
+            connection.row_factory = sqlite3.Row
+        row = db_execute(
+            connection,
             """
             SELECT sessions.token_hash, sessions.expires_at,
                    users.id, users.full_name, users.email
@@ -265,7 +335,7 @@ def get_current_user(credentials: Annotated[HTTPAuthorizationCredentials | None,
         except ValueError:
             expires_at = datetime.min
         if expires_at <= datetime.now():
-            connection.execute("DELETE FROM sessions WHERE token_hash = ?", (row["token_hash"],))
+            db_execute(connection, "DELETE FROM sessions WHERE token_hash = ?", (row["token_hash"],))
             raise HTTPException(status_code=401, detail="Session expired.")
 
     return {"id": row["id"], "full_name": row["full_name"], "email": row["email"]}
@@ -487,8 +557,10 @@ def count_csv_rows(path: Path) -> int:
 
 def get_workspace_or_404(workspace_id: int, user_id: int) -> dict:
     with get_connection() as connection:
-        connection.row_factory = sqlite3.Row
-        row = connection.execute(
+        if not USE_POSTGRES:
+            connection.row_factory = sqlite3.Row
+        row = db_execute(
+            connection,
             "SELECT id, user_id, name, csv_filename, created_at FROM workspaces WHERE id = ? AND user_id = ?",
             (int(workspace_id), int(user_id)),
         ).fetchone()
@@ -507,21 +579,37 @@ def register(payload: RegisterRequest) -> AuthResponse:
     email = validate_email_or_400(payload.email)
     try:
         with get_connection() as connection:
-            cursor = connection.execute(
-                """
-                INSERT INTO users (full_name, email, password_hash, created_at)
-                VALUES (?, ?, ?, ?)
-                """,
-                (
-                    payload.full_name.strip(),
-                    email,
-                    hash_password(payload.password),
-                    datetime.now().isoformat(timespec="seconds"),
-                ),
+            params = (
+                payload.full_name.strip(),
+                email,
+                hash_password(payload.password),
+                datetime.now().isoformat(timespec="seconds"),
             )
-            user_id = int(cursor.lastrowid)
-    except sqlite3.IntegrityError:
-        raise HTTPException(status_code=409, detail="An account already exists for this email.")
+            if USE_POSTGRES:
+                cursor = db_execute(
+                    connection,
+                    """
+                    INSERT INTO users (full_name, email, password_hash, created_at)
+                    VALUES (?, ?, ?, ?)
+                    RETURNING id
+                    """,
+                    params,
+                )
+                user_id = int(cursor.fetchone()["id"])
+            else:
+                cursor = db_execute(
+                    connection,
+                    """
+                    INSERT INTO users (full_name, email, password_hash, created_at)
+                    VALUES (?, ?, ?, ?)
+                    """,
+                    params,
+                )
+                user_id = int(cursor.lastrowid)
+    except Exception as error:
+        if is_unique_violation(error):
+            raise HTTPException(status_code=409, detail="An account already exists for this email.")
+        raise
 
     token = create_session(user_id)
     return AuthResponse(token=token, user={"id": user_id, "full_name": payload.full_name.strip(), "email": email})
@@ -531,8 +619,10 @@ def register(payload: RegisterRequest) -> AuthResponse:
 def login(payload: LoginRequest) -> AuthResponse:
     email = validate_email_or_400(payload.email)
     with get_connection() as connection:
-        connection.row_factory = sqlite3.Row
-        user = connection.execute(
+        if not USE_POSTGRES:
+            connection.row_factory = sqlite3.Row
+        user = db_execute(
+            connection,
             "SELECT id, full_name, email, password_hash FROM users WHERE email = ?",
             (email,),
         ).fetchone()
@@ -565,14 +655,28 @@ def create_workspace(payload: WorkspaceCreateRequest, user: dict = Depends(get_c
         create_empty_workspace_csv(csv_path)
     now = datetime.now().isoformat(timespec="seconds")
     with get_connection() as connection:
-        cursor = connection.execute(
-            """
-            INSERT INTO workspaces (user_id, name, csv_filename, created_at)
-            VALUES (?, ?, ?, ?)
-            """,
-            (int(user["id"]), payload.name.strip(), csv_filename, now),
-        )
-        workspace_id = int(cursor.lastrowid)
+        params = (int(user["id"]), payload.name.strip(), csv_filename, now)
+        if USE_POSTGRES:
+            cursor = db_execute(
+                connection,
+                """
+                INSERT INTO workspaces (user_id, name, csv_filename, created_at)
+                VALUES (?, ?, ?, ?)
+                RETURNING id
+                """,
+                params,
+            )
+            workspace_id = int(cursor.fetchone()["id"])
+        else:
+            cursor = db_execute(
+                connection,
+                """
+                INSERT INTO workspaces (user_id, name, csv_filename, created_at)
+                VALUES (?, ?, ?, ?)
+                """,
+                params,
+            )
+            workspace_id = int(cursor.lastrowid)
     return WorkspaceResponse(
         id=workspace_id,
         name=payload.name.strip(),
@@ -585,8 +689,10 @@ def create_workspace(payload: WorkspaceCreateRequest, user: dict = Depends(get_c
 @app.get("/api/workspaces")
 def list_workspaces(user: dict = Depends(get_current_user)) -> dict:
     with get_connection() as connection:
-        connection.row_factory = sqlite3.Row
-        rows = connection.execute(
+        if not USE_POSTGRES:
+            connection.row_factory = sqlite3.Row
+        rows = db_execute(
+            connection,
             "SELECT id, name, csv_filename, created_at FROM workspaces WHERE user_id = ? ORDER BY id DESC",
             (int(user["id"]),),
         ).fetchall()
